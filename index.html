@@ -1,0 +1,205 @@
+<html>
+<head>
+</head>
+<body>
+    <meta charset="UTF-8">
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+text-align: center;
+padding: 40px;
+margin: 13px;
+background-color: rgb(84, 84, 84, 0.7);
+color: #ffffff;    
+}
+
+.details{
+    padding: 15px 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.details label{
+    font-size:1em;
+}
+
+body{
+background-image: url(sunny.jpg);
+background-size: cover;
+background-color: rgba(0, 0, 0, 0.5);
+background-blend-mode: multiply;
+}
+
+.center{
+    border: 5px solid rgb(84, 84, 84);
+    max-width: 60vw;
+    margin: auto;
+    background-color: rgb(204, 204, 204, 0.5);
+    border-radius: 50px;
+}
+
+.details #name{
+    width: 96.5%;
+    height: 2.5vh;
+    padding: 20px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.surv{
+font-family:Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Helvetica, sans-serif, Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+font-kerning: 100px;
+font-weight: 100;
+border-radius: 20px;
+}
+
+.gen{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.M{
+background-color: rgba(66, 96, 180, 0.7) ;
+border-radius: 8px;
+padding: 3px;    
+margin-left: 75px;
+}
+
+.F{
+background-color: rgba(119, 56, 109, 0.7) ;
+border-radius: 8px;
+padding: 3px;    
+margin-left: 100px;
+}
+
+.OTH{
+    background-color: rgba(94, 94, 94, 0.7) ;
+border-radius: 8px;
+padding: 3px;    
+margin-left: 100px;    
+}
+
+.yes{
+    background-color: rgba(27, 89, 37, 0.7) ;
+border-radius: 8px;
+padding-left: 50px;
+padding-right: 50px;    
+margin-left: 30px;    
+}
+
+.nr{
+    background-color: rgba(141, 120, 52, 0.7) ;
+border-radius: 8px;
+padding-left: 50px;
+padding-right: 50px;     
+margin-left: 30px;    
+}
+
+.no{
+    background-color: rgba(118, 39, 39, 0.7) ;
+border-radius: 8px;
+padding-left: 50px;
+padding-right: 50px;     
+margin-left: 30px;    
+}
+
+.q3{
+padding-left: 200px;
+padding-right: 200px;
+
+border-radius: 20px;
+}
+
+.subm{
+position: relative;
+bottom: 40px;
+left: 900px;
+background-color: rgba(148, 57, 57, 0.635);
+padding: 5px;
+border-radius: 100%;
+border-width: 3px;
+border-color:rgb(59, 64, 64) ;
+}
+
+
+    </style>
+<form class="center">
+
+    <h1 class="surv">Personal Survey</h1>
+
+    <div class="details">
+    <label>Full Name</label>
+    <input placeholder="Surname, First Name, M.I." type="text" id="name" required><br>
+    <br>
+    <label class="gen">Gender :</label>
+    <label class="M">Male</label><input type="radio"name="gender" value="Male" id="m" required>
+    <label class="F">Female</label><input type="radio" name="gender" value="Female" id="fm">
+    <label class="OTH">Other</label><input type="radio" name="gender" value="Other" id="oth">
+<br>
+<br>
+<p>1. Do you find yourself attractive or good-looking?<br>
+    <br>
+<label class="yes">YES</label><input type="radio" name="q1" value="yes" id="y" required>
+<label class="no">NO</label><input type="radio" name="q1" value="no" id="n">
+<label class="nr">Not really</label><input type="radio" name="q1" value="not really" id="nr">
+<br>
+<p>2. If you were to rate yourself from 1-10 based on your looks, what number would you pick?</p><br>
+<input type="text" placeholder="1-10" id="q2" required>
+<p>3. Do you think appearance matters?</p>
+<input class="q3" placeholder="Explain in it your way." type="text" id="q3" required>
+<p>4. Which of the things below do you think is important when it comes to YOUR appearance?</p><br>
+<input id="q4a" type="checkbox" value="clothing"> Clothing <br>
+<input id="q4b" type="checkbox" value="haircut"> Haircut<br>
+<input id="q4c" type="checkbox" value="accessories"> Accessories (hats, glasses, etc)<br>
+<input id="q4d" type="checkbox" value="physical features"> Physical Features<br>
+<input id="q4e" type="checkbox" value="makeup"> Makeup<br>
+<input id="q4f" type="checkbox" value="nothing">Nothing<br>
+<br>
+<p>5. Do you think this person is handsome?</p><br>
+<img src="jj.jpg" width="150px" height="100px">
+<label class="yes">YES</label><input type="radio" name="q5" value="yes" id="y" required>
+<label class="no">NO</label><input type="radio" name="q5" value="no" id="n">
+    </div>
+</form>    
+
+<script>
+    
+function submit(){
+
+var x=document.getElementById("name").value;
+const xx =document.querySelector('input[name="gender"]:checked').value;
+const x1 =document.querySelector('input[name="q1"]:checked').value;
+var x2 = document.getElementById('q2').value;
+var x3 = document.getElementById('q3').value;
+var x4 = document.getElementById('q4a').value;
+var xx4 = document.getElementById('q4b').value;
+var xxx4 = document.getElementById('q4c').value;
+var xxxx4 = document.getElementById('q4d').value;
+var xxxxx4 = document.getElementById('q4e').value;
+var xxxxxx4 = document.getElementById('q4f').value;
+const x5 =document.querySelector('input[name="q5"]:checked').value;
+
+localStorage.setItem('Name',x)
+localStorage.setItem('Gender',xx)
+localStorage.setItem('Question1',x1)
+localStorage.setItem('Question2',x2)
+localStorage.setItem('Question3',x3)
+localStorage.setItem('Question4.1',x4)
+localStorage.setItem('Question4.2',xx4)
+localStorage.setItem('Question4.3',xxx4)
+localStorage.setItem('Question4.4',xxxx4)
+localStorage.setItem('Question4.5',xxxxx4)
+localStorage.setItem('Question4.6',xxxxxx4)
+localStorage.setItem('Question5',x5)
+
+
+}
+
+</script>
+<button class="subm" type="submit" onclick="submit()">Submit</button>
+</body>
+</html>            
