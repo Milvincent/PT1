@@ -107,7 +107,7 @@ padding-right: 50px;
 margin-left: 30px;    
 }
 
-.q3{
+.q3, .q6, .q7, .q8{
 padding-left: 200px;
 padding-right: 200px;
 
@@ -150,7 +150,7 @@ border-color:rgb(59, 64, 64) ;
 <p>2. If you were to rate yourself from 1-10 based on your looks, what number would you pick?</p><br>
 <input type="text" placeholder="1-10" id="q2" required>
 <p>3. Do you think appearance matters?</p>
-<input class="q3" placeholder="Explain in it your way." type="text" id="q3" required>
+<input class="q3" placeholder="Explain it in your way." type="text" id="q3" required>
 <p>4. Which of the things below do you think is important when it comes to YOUR appearance?</p><br>
 <input id="q4a" type="checkbox" value="clothing"> Clothing <br>
 <input id="q4b" type="checkbox" value="haircut"> Haircut<br>
@@ -163,6 +163,15 @@ border-color:rgb(59, 64, 64) ;
 <img src="jj.jpg" width="150px" height="100px">
 <label class="yes">YES</label><input type="radio" name="q5" value="yes" id="y" required>
 <label class="no">NO</label><input type="radio" name="q5" value="no" id="n">
+
+<p>6. In your opinion, do you think a person's appearance define who they truly are?</p><br>
+<input type="text" class="q6" placeholder="Explain your answer." id="q6" required>
+
+<p>7. Do you think that a person's appearance is the most ipmortant characteristic they should have?</p><br>
+<input type="text" class="q7" id="q7" required>
+
+<p>8. If you were given an opportunity to choose between beauty or intelligence, what would choose to be?</p><br>
+<input type="text" class="q8" id="q8" required>
     </div>
 </form>    
 
@@ -182,6 +191,9 @@ var xxxx4 = document.getElementById('q4d').value;
 var xxxxx4 = document.getElementById('q4e').value;
 var xxxxxx4 = document.getElementById('q4f').value;
 const x5 =document.querySelector('input[name="q5"]:checked').value;
+var ix=document.getElementById("q6").value;
+var iix=document.getElementById("q7").value;
+var iiix=document.getElementById("q8").value;
 
 localStorage.setItem('Name',x)
 localStorage.setItem('Gender',xx)
@@ -195,6 +207,9 @@ localStorage.setItem('Question4.4',xxxx4)
 localStorage.setItem('Question4.5',xxxxx4)
 localStorage.setItem('Question4.6',xxxxxx4)
 localStorage.setItem('Question5',x5)
+localStorage.setItem('Question6',ix)
+localStorage.setItem('Question7',iix)
+localStorage.setItem('Question8',iiix)
 
 
 }
