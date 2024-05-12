@@ -107,7 +107,7 @@ padding-right: 50px;
 margin-left: 30px;    
 }
 
-.q3, .q6, .q7, .q8{
+.q3, .q6, .q7, .q8, .q9{
 padding-left: 200px;
 padding-right: 200px;
 
@@ -167,11 +167,14 @@ border-color:rgb(59, 64, 64) ;
 <p>6. In your opinion, do you think a person's appearance define who they truly are?</p><br>
 <input type="text" class="q6" placeholder="Explain your answer." id="q6" required>
 
-<p>7. Do you think that a person's appearance is the most ipmortant characteristic they should have?</p><br>
-<input type="text" class="q7" id="q7" required>
+<p>7. Do you think that a person's appearance is the most important characteristic they should have?</p><br>
+<input type="text" class="q7" placeholder="Explain your answer." id="q7" required>
 
 <p>8. If you were given an opportunity to choose between beauty or intelligence, what would choose to be?</p><br>
-<input type="text" class="q8" id="q8" required>
+<input type="text" class="q8" placeholder="Explain your answer." id="q8" required>
+
+<p>9. Besides appearance, what do you think is an important characteristic that a person should have?</p><br>
+<input type="text" class="q9" placeholder="Explain your answer." id="q9" required>
     </div>
 </form>    
 
@@ -194,6 +197,7 @@ const x5 =document.querySelector('input[name="q5"]:checked').value;
 var ix=document.getElementById("q6").value;
 var iix=document.getElementById("q7").value;
 var iiix=document.getElementById("q8").value;
+var iiiix=document.getElementById("q9").value;
 
 localStorage.setItem('Name',x)
 localStorage.setItem('Gender',xx)
@@ -210,6 +214,7 @@ localStorage.setItem('Question5',x5)
 localStorage.setItem('Question6',ix)
 localStorage.setItem('Question7',iix)
 localStorage.setItem('Question8',iiix)
+localStorage.setItem('Question9',iiiix)
 
 
 }
